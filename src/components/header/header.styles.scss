@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  background-color: #f0edff;
+
+  .logo-container {
+    width: 70px;
+
+    .logo {
+      padding: 5px 0px;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 20px;
+
+    .nav-item {
+      padding: 10px 20px;
+      color: #222;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+}
