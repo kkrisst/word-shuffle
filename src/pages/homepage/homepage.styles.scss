@@ -1,5 +1,6 @@
 .homepage {
   font-family: 'Open Sans Condensed', sans-serif;
+  scroll-behavior: smooth; /* TODO fix smooth scrolling */
 
   .landing-image-container {
     width: 100%;
@@ -84,5 +85,6 @@
     line-height: 200px;
     text-align: center;
     border: 1px solid yellow;
+    box-sizing: border-box;
   }
 }
