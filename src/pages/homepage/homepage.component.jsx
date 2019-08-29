@@ -1,27 +1,56 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // import { ReactComponent as Logo } from '../../assets/dose-media.jpg';
-import LandingBackground from '../../assets/dollar-gill.jpg';
+import LandingBackground from '../../assets/dollar-gill2.jpg';
 // import { ReactComponent as LandingBackground } from '../../assets/lukas-blazek';
 // import { ReactComponent as LandingBackground } from '../../assets/sharon-mccutcheon';
 // import { ReactComponent as LandingBackground } from '../../assets/dollar-gill';
 
 import './homepage.styles.scss';
 
-const HomePage = () => (
-  <div className='homepage'>
+const HomePage = () => {
+  const currentUser = false;
 
-    <div className='landing-image-container'>
-      <img
-        src={LandingBackground}
-        className='landing-background'
-        alt='homepage main image'
-      />
-      <div className='title'>WORD SHUFFLE</div>
+  return (
+    <div className='homepage'>
+
+      <div className='landing-image-container'>
+        <div
+          style={{
+          backgroundImage: `url(${LandingBackground})`
+        }}
+          className='landing-image'
+        />
+        <div className='title'>WORD SHUFFLE</div>
+        <a className='learn-more' href='#info-box'>CLICK TO LEARN MORE</a>
+      </div>
+
+      <div className='main-content'>
+        <div id='info-box'>
+          <span className='intro'>Word Shuffle helps you...</span>
+          <ul>
+            <li>practice building sentences</li>
+            <li>teach you about the word order</li>
+            <li>help you understand the role of words</li>
+            <li>strengthen your overall skill</li>
+          </ul>
+          <span className='outro'>in the Hungarian language!</span>
+        </div>
+        
+        <div className='main-button-container'>
+          {
+            currentUser
+            ? <Link className='main-button' to='/lessons'>Go to your lessons</Link>
+            : <Link className='main-button' to='/signin'>Sign up</Link>
+          }
+        </div>
+      </div>
+      
+      <div className='app-screenshot'>PLACE A SCREENSHOT HERE</div>
+
     </div>
-
-    
-  </div>
-);
+  );
+}
 
 export default HomePage;

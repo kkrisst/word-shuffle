@@ -1,4 +1,12 @@
 .footer {
   width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  font-size: 10px;
   text-align: center;
+
+  .inner-wrapper {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
 }
