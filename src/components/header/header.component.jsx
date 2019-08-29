@@ -6,7 +6,7 @@ import './header.styles.scss';
 
 // TODO add currentUser from store
 const Header = () => {
-  const currentUser = true;
+  const currentUser = false;
 
   return (
     <div className='header'>
