@@ -8,9 +8,10 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
 import HomePage from './pages/homepage/homepage.component';
-import LessonsPage from './pages/lessons/lessons.component';
-import ContactPage from './pages/contact/contact.component';
+import LessonsPage from './pages/lessons-page/lessons-page.component';
+import ContactPage from './pages/contact-page/contact-page.component';
 import UserAuthPage from './pages/user-auth-page/user-auth-page.component';
+import LicencePage from './pages/licence-page/licence-page.component';
 
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
@@ -59,6 +60,7 @@ class App extends React.Component {
             : (<UserAuthPage />)
           }
           />
+          <Route exact path='/licence' component={LicencePage} />
         </Switch>
         <Footer />
       </div>
