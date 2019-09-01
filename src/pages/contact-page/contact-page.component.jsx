@@ -4,7 +4,7 @@ import * as emailjs from 'emailjs-com';
 
 import CustomButton from '../../components/custom-button/custom-button.component';
 
-import './contact.styles.scss';
+import './contact-page.styles.scss';
 
 class ContactPage extends React.Component {
     constructor(props) {
