@@ -19,8 +19,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   const snapshot = await userRef.get();
   
   if(!snapshot.exists) {
-    const { displayName, email, licence } = userAuth;
+    const { displayName, email } = userAuth;
+    let { licence } = userAuth;
     const createdAt = new Date();
+    if (!licence) {
+      licence = 'trial';
+    }
 
     try {
       await userRef.set({

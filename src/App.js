@@ -52,7 +52,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/lessons' component={LessonsPage} />
+          <Route path='/lessons' component={LessonsPage} />
           <Route exact path='/contact' component={ContactPage} />
           <Route exact path='/signin' render={
             () => this.props.currentUser

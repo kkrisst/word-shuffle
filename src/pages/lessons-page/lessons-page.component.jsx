@@ -4,9 +4,9 @@ import { createStructuredSelector } from 'reselect';
 import { Route, Link } from 'react-router-dom';
 
 import LessonsOverview from '../../components/lessons-overview/lessons-overview.component';
+import QuestionPage from '../question-page/question-page.component';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
-
 import './lessons-page.styles.scss';
 
 const LessonsPage = ({ currentUser, match }) => {
@@ -18,6 +18,7 @@ const LessonsPage = ({ currentUser, match }) => {
                 (
                     <div className='logged-in-wrapper'>
                         <Route exact path={`${match.path}`} component={LessonsOverview} />
+                        <Route path={`${match.path}/:lessonId/:questionId`} component={QuestionPage} />
                     </div>
                 )
                 : <Link className='main-button' to='/signin'>Sign up</Link>
