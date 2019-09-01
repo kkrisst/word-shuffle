@@ -12,7 +12,6 @@ import './header.styles.scss';
 
 // TODO add currentUser from store
 const Header = ({ currentUser }) => {
-console.log(currentUser);
   return (
     <div className='header'>
       <Link className='logo-container' to='/'>

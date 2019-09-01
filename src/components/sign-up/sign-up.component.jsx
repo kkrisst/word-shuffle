@@ -16,6 +16,8 @@ class SignUp extends React.Component {
             password: '',
             confirmPassword: '',
 
+            licence: 'trial',
+
             passwordMismatchMessage: '',
         }
     }
@@ -23,7 +25,7 @@ class SignUp extends React.Component {
     onSubmit = async event => {
         event.preventDefault();
 
-        const { displayName, email, password, confirmPassword } = this.state;
+        const { displayName, email, password, confirmPassword, licence } = this.state;
 
         if(password !== confirmPassword) {
             this.setState({
@@ -41,12 +43,14 @@ class SignUp extends React.Component {
         const { user } = await auth.createUserWithEmailAndPassword(email, password);
 
         await createUserProfileDocument(user, { displayName });
+        await createUserProfileDocument(user, { licence });
 
         this.setState({
             displayName: '',
             email: '',
             password: '',
             confirmPassword: '',
+            licence: 'trial'
         });
         } catch (error) {
             console.error(error);
@@ -57,7 +61,7 @@ class SignUp extends React.Component {
         const { name, value } = event.target;
 
         this.setState({
-        [name]: value
+            [name]: value
         });
     }
 
