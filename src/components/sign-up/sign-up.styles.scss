@@ -1,0 +1,19 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  .password-mismatch-alert {
+    color: red;
+    height: 20px;
+    width: 380px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .group {
+    margin-bottom: 0px;
+  }
+}
