@@ -8,3 +8,8 @@ export const selectCurrentUser = createSelector(
     return user.currentUser;
   }
 );
+
+export const selectUserLicence = createSelector(
+  [selectUser],
+  (user) => user.licence
+);
