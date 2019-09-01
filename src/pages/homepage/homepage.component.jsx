@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 // import { ReactComponent as Logo } from '../../assets/dose-media.jpg';
 import LandingBackground from '../../assets/dollar-gill2.jpg';
@@ -9,8 +13,7 @@ import LandingBackground from '../../assets/dollar-gill2.jpg';
 
 import './homepage.styles.scss';
 
-const HomePage = () => {
-  const currentUser = false;
+const HomePage = ({ currentUser }) => {
 
   return (
     <div className='homepage'>
@@ -53,4 +56,8 @@ const HomePage = () => {
   );
 }
 
-export default HomePage;
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
+export default connect(mapStateToProps)(HomePage);
