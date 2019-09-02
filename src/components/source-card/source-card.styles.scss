@@ -1,0 +1,14 @@
+.source-card{
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #c7ddff;
+  color: #000;
+  border-radius: 4px;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background-color: #8fbcff;
+  }
+}
