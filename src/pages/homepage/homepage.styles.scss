@@ -70,11 +70,15 @@
       .main-button {
         line-height: 200px;
         font-size: 36px;
-        border: 1px solid white;
         padding: 10px;
-        border-radius: 10px;
-        background-color: #6388b0;
+        border-radius: 4px;
+        background-color: #FF5200;
+        transition: background-color 1s;
         color: white;
+
+        &:hover {
+          background-color: #c23e00;
+        }
       }
     }
   }

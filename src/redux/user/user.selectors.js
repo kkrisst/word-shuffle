@@ -11,5 +11,7 @@ export const selectCurrentUser = createSelector(
 
 export const selectUserLicence = createSelector(
   [selectUser],
-  (user) => user.licence
+  (user) => {
+    return user.currentUser.licence
+  }
 );
