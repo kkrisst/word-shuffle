@@ -21,7 +21,7 @@ const LessonsOverview = ({ lessons, userLicence }) => {
       <span className='licence-label'>Your Licence:</span>
       <span className='licence-type'>{userLicence.toUpperCase()}</span>
       {
-        userLicence.toUpperCase() == 'TRIAL' &&
+        userLicence.toUpperCase() === 'TRIAL' &&
           <Link className='licence-upgrade-button' to='/licence'>Upgrade to PRO!</Link>
       }
     </div>

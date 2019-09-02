@@ -1,10 +1,14 @@
 import React from 'react';
 
+import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './licence-page.styles.scss';
 
 const LicencePage = () => {
+
+  const price = 19;
 
   return (
     <div className='licence-page'>
@@ -29,9 +33,9 @@ const LicencePage = () => {
           </div>
         </div>
         <div className='upgrade-block'>
-          <div className='price'><FontAwesomeIcon style={{  }} icon="euro-sign" />19.00 / month</div>
-          <div className='upgrade-button'></div>
-          <div classname='stripe-label'>via Stripe</div>
+          <div className='price'><FontAwesomeIcon style={{  }} icon="euro-sign" />{price} / month</div>
+          <div className='upgrade-button'><StripeCheckoutButton price={price}/></div>
+          <div className='stripe-label'>via Stripe</div>
         </div>
       </div>
       <div className='not-implemented-info'>This feature is not live yet. To try PRO, use the following example credit card information:</div>
