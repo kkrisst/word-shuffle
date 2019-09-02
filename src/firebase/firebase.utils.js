@@ -42,6 +42,29 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+export const upgradeUserLicence = async (userAuth) => {
+  console.log("upgradeUserLicence");
+  console.log(userAuth);
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapshot = await userRef.get();
+
+  if(snapshot.exists) {
+    const licence = 'pro';
+
+    try {
+      await userRef.update({
+        licence
+      })
+    } catch (error) {
+      console.log('error creating user', error.message);
+    }
+  }
+
+  return userRef;
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();

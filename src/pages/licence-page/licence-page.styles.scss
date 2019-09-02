@@ -5,4 +5,72 @@
   /*display: flex;
   justify-content: space-between;*/
   margin: 30px auto;
+
+  .licence-label {
+    width: 70vw;
+    margin: 0 auto;
+    font-size: 40px;
+  }
+
+  .middle-block {
+    position: relative;
+    width: 60vw;
+    margin: 100px auto;
+
+    .benefit-list {
+
+      .benefit-line {
+        display: flex;
+        font-size: 1.4vw;
+        margin-bottom: 20px;
+
+        .benefit-text {
+          margin-left: 20px;
+          color: #031cff;
+        }
+      }
+    }
+
+    .upgrade-block {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%); 
+      transform: translate(-50%, -50%);
+
+      .price {
+        font-size: 2vw;
+      }
+
+      .upgrade-button {
+        margin: 20px auto;
+        width: 100px;
+      }
+
+      .stripe-label {
+        float: right;
+        color: red;
+      }
+    }
+  }
+
+  .card-info {
+    width: max-content;
+    margin: 50px auto;
+    font-size: 18px;
+    color: #999;
+
+    .not-implemented-info {
+      width: max-content;
+      margin: 10px auto;
+    }
+
+    .example-card-info {
+      width: max-content;
+      margin: 10px auto;
+      color: #ff8a8a;
+    }
+  }
 }
