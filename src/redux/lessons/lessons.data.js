@@ -1,9 +1,23 @@
 const LESSONS_DATA = [
   {
     id: 1,
-    title: 'Lesson 1',
+    title: 'Going shopping',
     bullet: 'I.',
-    words: ['ma', 'megyek', 'boltba'],
+    words: [
+      {
+        wordId: 1,
+        word: 'ma'
+      },
+      {
+        wordId: 2,
+        word: 'megyek'
+      },
+      {
+        wordId: 3,
+        word: 'boltba'
+      }
+    ],
+    description: 'In this lesson we focus on understanding the main principle of Hungarian word order ...',
     items: [
       {
         id: 1,
@@ -24,9 +38,23 @@ const LESSONS_DATA = [
   },
   {
     id: 2,
-    title: 'Lesson 2',
+    title: 'The most popular fruit!',
     bullet: 'II.',
-    words: ['ma', 'megyek', 'boltba'],
+    words: [
+      {
+        wordId: 1,
+        word: 'szeretem'
+      },
+      {
+        wordId: 2,
+        word: 'az'
+      },
+      {
+        wordId: 3,
+        word: 'almát'
+      }
+    ],
+    description: 'This lessons is an extra practice for ...',
     items: [
       {
         id: 1,
