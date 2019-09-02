@@ -1,6 +1,7 @@
 .contact-page {
   width: 800px;
-  height: calc(100vh - 195px);
+  min-height: 450px;
+  height: calc(100vh - 230px);
   margin: 30px auto;
 
   .contact-group {

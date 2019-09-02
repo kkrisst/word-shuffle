@@ -1,6 +1,7 @@
 .user-auth-page {
   width: 800px;
-  height: calc(100vh - 195px);
+  min-height: 600px;
+  height: calc(100vh - 230px);
   display: flex;
   justify-content: space-between;
   margin: 30px auto;
