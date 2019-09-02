@@ -13,13 +13,17 @@ import './lessons-overview.styles.scss';
 const LessonsOverview = ({ lessons, userLicence }) => {
   console.log(lessons);
   console.log(lessons.lessons);
+  console.log(userLicence);
 
   return (
     <div className='lessons-overview'>
     <div className='licence-info'>
       <span className='licence-label'>Your Licence:</span>
-      <span className='licence-type'>{userLicence}</span>
-      <Link className='licence-upgrade-button' to='/licence'>Upgrade to PRO!</Link>
+      <span className='licence-type'>{userLicence.toUpperCase()}</span>
+      {
+        userLicence.toUpperCase() == 'TRIAL' &&
+          <Link className='licence-upgrade-button' to='/licence'>Upgrade to PRO!</Link>
+      }
     </div>
     <div className='lesson-list'>
       {

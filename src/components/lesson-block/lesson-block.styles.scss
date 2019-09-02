@@ -1,0 +1,61 @@
+.lesson-block {
+  margin: 20px 0 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+
+  .lesson-header {
+    font-size: 24px;
+
+    .bullet {
+      margin-right: 15px
+    }
+  
+    .title {
+    }
+  }
+  
+  .lesson-info {
+    margin: 10px 0 20px 10px;
+
+    .description {
+      padding: 5px;
+    }
+
+    .word-list {
+      font-size: 20px;
+      padding: 5px;
+
+      .one-word {
+        margin-left: 20px;
+        color: #0a71e0
+      }
+    }
+  }
+
+  .questions-block {
+    margin: 10px 0 20px 10px;
+
+    .questions-label {
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    .question-row-list {
+
+      .question-row {
+        padding: 3px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #1155c2;
+        cursor: pointer;
+
+        &:hover {
+          color: #0a71e0;
+        }
+      }
+  
+    }
+  }
+
+
+}

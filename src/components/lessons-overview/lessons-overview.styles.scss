@@ -1,0 +1,36 @@
+.lessons-overview {
+
+  .licence-info {
+    margin: 10px 0 20px 0;
+
+    .licence-label {
+      font-size: 20px;
+
+    }
+
+    .licence-type {
+      font-size: 24px;
+      font-style: italic;
+      color: #e60008;
+      margin-left: 12px;
+    }
+
+    .licence-upgrade-button {
+        font-size: 26px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #FF5200;
+        transition: background-color 1s;
+        color: white;
+        margin-left: 20px;
+
+        &:hover {
+          background-color: #c23e00;
+        }
+    }
+  }
+
+  .lesson-list {
+    margin-top: 50px;
+  }
+}
