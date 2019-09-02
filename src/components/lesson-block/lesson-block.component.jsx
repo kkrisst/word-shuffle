@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './lesson-block.styles.scss';
 
 const LessonBlock = (props) => {
-  console.log(props);
 
   const { lessonId, bullet, title, items, words, description, history, match } = props;
   
