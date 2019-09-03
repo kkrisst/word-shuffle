@@ -21,7 +21,9 @@ const LessonsPage = ({ currentUser, match }) => {
                         <Route path={`${match.path}/:lessonId/:questionId`} component={QuestionPage} />
                     </div>
                 )
-                : <Link className='main-button' to='/signin'>Sign up</Link>
+                : (<div className='main-button-container'>
+                        <Link className='main-button' to='/signin'>Sign up</Link>
+                    </div>)
                 
             }            
         </div>

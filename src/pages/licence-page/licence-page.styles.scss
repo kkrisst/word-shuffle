@@ -73,4 +73,25 @@
       color: #ff8a8a;
     }
   }
+
+  .main-button-container {
+    height: 100px;
+    margin: 50px auto;
+    width: fit-content;
+
+    .main-button {
+      line-height: 100px;
+      height: 100%;
+      font-size: 36px;
+      padding: 20px 20px;
+      border-radius: 4px;
+      background-color: #FF5200;
+      transition: background-color 1s;
+      color: white;
+  
+      &:hover {
+        background-color: #c23e00;
+      }
+    }
+  }
 }
