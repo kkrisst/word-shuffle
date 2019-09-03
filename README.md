@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Word Shuffle
 
-Word Shuffle is a Hungariona word order practice application.
+Word Shuffle is a Hungarian word order practice application.
 It uses drag and drop cards to form Hungarian sentences to answer questions asked by the application.
 
 ### Future plans
