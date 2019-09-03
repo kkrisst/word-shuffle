@@ -9,7 +9,7 @@ const LessonBlock = (props) => {
 
   const { lessonId, bullet, title, items, words, description, history, match } = props;
   
-  const urlPrefix = match.url;
+  let urlPrefix = match.url;
   if (urlPrefix.endsWith("/")) {
     urlPrefix = urlPrefix.slice(0, -1);
   }
@@ -26,7 +26,6 @@ const LessonBlock = (props) => {
         <div className='word-list'>
         Words: {
             words.map(word => {
-                console.log(word);
                 return (<span className='one-word' key={word.wordId}>{word.word}</span>)
               }
 

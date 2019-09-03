@@ -11,9 +11,6 @@ import { selectUserLicence } from '../../redux/user/user.selectors';
 import './lessons-overview.styles.scss';
 
 const LessonsOverview = ({ lessons, userLicence }) => {
-  console.log(lessons);
-  console.log(lessons.lessons);
-  console.log(userLicence);
 
   return (
     <div className='lessons-overview'>

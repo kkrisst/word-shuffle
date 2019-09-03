@@ -43,8 +43,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 };
 
 export const upgradeUserLicence = async (userAuth) => {
-  console.log("upgradeUserLicence");
-  console.log(userAuth);
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
