@@ -12,17 +12,68 @@
     font-size: 40px;
   }
 
+  .instructions {
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
   .blank-list {
     display: flex;
     justify-content: space-evenly;
-    width: 50vw;
+    width: 75vw;
     margin: 50px auto;
+    margin-top: 100px;
   }
 
   .word-list {
     display: flex;
     justify-content: space-evenly;
-    width: 50vw;
+    width: 75vw;
     margin: 50px auto;
+  }
+
+  .check-button {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 80px;
+    line-height: 40px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #0fc908;
+    transition: background-color 0.3s;
+    color: white;
+
+    &:hover {
+      background-color: #4ba82f;
+    }
+  }
+
+  .check-string {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    &.correct {
+      color: green;
+    }
+
+    &.wrong {
+      color: red;
+    }
+  }
+
+  .back-button-container {
+    text-align: center;
+    margin-top: 20px;
+
+    .back-button {
+      font-size: 20px;
+      color: blue;
+    }
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { DndProvider } from "react-dnd";
 import HTML5Backend from 'react-dnd-html5-backend';
 
@@ -12,31 +13,70 @@ import './question-page.styles.scss';
 
 class QuestionPage extends React.Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    let init_array = [];
+    for (let i = 0; i < props.questionData.words.length; i++) {
+      init_array.push(null);
+    }
+
     this.state = {
-      userOrder: []
+      userOrder: init_array,
+      displayCheckString: false,
+      correct: false
     }
   };
 
   onDrop = (item, targetId) => {
-    console.log(item);
-    console.log(targetId);
 
-    let newUserOrder = this.state.userOrder;
+    let newUserOrder = [...this.state.userOrder];
+
+    for (let [i, value] of newUserOrder.entries()) {
+      if (value !== null) {
+        if (i !== targetId && value.word === item.word) {
+          newUserOrder[i] = null;
+        }
+      }
+    }
+    
     newUserOrder[targetId] = { word: item.word, id: item.id };
+
+    console.log(newUserOrder);
+
     this.setState({
-      userOrder: newUserOrder
-    }, () => console.log(this.state))
+      userOrder: newUserOrder,
+      displayCheckString: false
+    }/*, () => console.log(this.state)*/)
   };
 
   checkResult = () => {
-    console.log("checkResult");
+    const { questionData: { correct_orders } } = this.props;
+
+    let userOrderStr = '';
+    for (let value of this.state.userOrder) {
+      if (value === null) {
+        userOrderStr += 'x';
+      } else {
+        userOrderStr += value.id;
+      }
+    }
+
+    var correct = false;
+    for (let value of correct_orders) {
+      if (userOrderStr === value) {
+        correct = true;
+        break;
+      }
+    }
+    
+    this.setState({
+      displayCheckString: true,
+      correct
+    });
   };
 
   render () {
-    const { questionData } = this.props;
-    const { question, words, correc_orders } = questionData;
+    const { questionData: { question, words } } = this.props;
   
     const targets = [];
     for (let i = 0; i < words.length; i++) {
@@ -44,13 +84,16 @@ class QuestionPage extends React.Component {
       if (this.state.userOrder[i]) {
         droppedItem = this.state.userOrder[i];
       } 
-      targets.push(<TargetCard targetId={i} onDrop={this.onDrop} userOrder={this.state.userOrder} />);
+      targets.push(<TargetCard key={i} targetId={i} onDrop={this.onDrop} droppedItem={droppedItem} />);
     }
+
+    const checkString = this.state.correct ? 'Correct order!' : 'Wrong order!';
 
     return (
       <DndProvider backend={HTML5Backend}>
         <div className='question-page'>
           <div className='question'>{question}</div>
+          <div className='instructions'>Drag the blue cards to form a sentence.</div>
 
           <div className='blank-list'>
             {targets}
@@ -63,9 +106,20 @@ class QuestionPage extends React.Component {
               })
             }
           </div>
+          <div className='check-button' onClick={this.checkResult}>Check</div>
+          {
+            this.state.displayCheckString
+            ? (<div className={`check-string ${this.state.correct ? 'correct' : 'wrong'}`}>{checkString}</div>)
+            : ''
+          }
+          <div className='back-button-container'>
+            {
+              this.state.correct
+              ? (<Link className='back-button' to='/lessons'>Back to lessons</Link>)
+              : ''
+            }
+          </div>
         </div>
-
-        <div className='check-button' onClick={this.checkResult}>Check</div>
       </DndProvider>
     )
   }

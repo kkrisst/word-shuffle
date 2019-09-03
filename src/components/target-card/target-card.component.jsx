@@ -21,8 +21,8 @@ const TargetCard = (props) => {
   return (
     <div ref={drop} className='target-card'>
       {
-        props.userOrder[props.targetId]
-        ? (<span>{props.userOrder[props.targetId].word}</span>)
+        props.droppedItem
+        ? (<span>{props.droppedItem.word}</span>)
         : ''
       }
     </div>
