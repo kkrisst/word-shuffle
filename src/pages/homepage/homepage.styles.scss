@@ -96,12 +96,47 @@
     }
   }
 
-  .app-screenshot {
+  .screenshots {
     width: 100%;
-    height: 200px;
-    line-height: 200px;
     text-align: center;
-    border: 1px solid yellow;
     box-sizing: border-box;
+    border-top: 1px solid #999;
+    margin-top: 60px;
+    padding-top: 40px;
+
+    .screenshot-container {
+      display: flex;
+      margin-bottom: 40px;
+      width: 80vw;
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      .description-container {
+        display: inline-block;
+        position: relative;
+        width: 30vw;
+
+        .description {
+          font-size: 22px;
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+        }
+      }
+
+      .screenshot-image {
+        display: inline-block;
+        width: 50vw;
+        -webkit-box-shadow: 5px 5px 3px 0px rgba(153, 153, 153, 0.75);
+        -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+        box-shadow: 5px 5px 3px 0px rgba(153, 153, 153, 0.75);
+      }
+    }
   }
 }
