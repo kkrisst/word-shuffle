@@ -63,7 +63,7 @@ const HomePage = ({ currentUser }) => {
         </div>
         <div className='screenshot-container'>
           <div className='description-container'>
-            <div className='description'>Studying wid Word Shuffle is fun: drag cards to form sentences</div>
+            <div className='description'>Studying with Word Shuffle is fun: drag cards to form sentences</div>
           </div>
           <img className='screenshot-image' src={Screen2} alt='screenshot 2'></img>
         </div>
