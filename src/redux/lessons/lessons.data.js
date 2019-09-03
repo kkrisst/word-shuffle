@@ -22,17 +22,17 @@ const LESSONS_DATA = [
       {
         id: 1,
         question: 'Where are you going to go today?',
-        correc_orders: ['132', '321']
+        correct_orders: ['132', '321', '32x']
       },
       {
         id: 2,
         question: 'When are you going shopping?',
-        correc_orders: ['123', '312']
+        correct_orders: ['123', '312']
       },
       {
         id: 3,
         question: 'Are you going to go shopping today?',
-        correc_orders: ['213']
+        correct_orders: ['213']
       },
     ]
   },
@@ -59,17 +59,17 @@ const LESSONS_DATA = [
       {
         id: 1,
         question: 'Where are you going to go today?',
-        correc_orders: ['132', '321']
+        correct_orders: ['132', '321']
       },
       {
         id: 2,
         question: 'When are you going shopping?',
-        correc_orders: ['123', '312']
+        correct_orders: ['123', '312']
       },
       {
         id: 3,
         question: 'Are you going to go shopping today?',
-        correc_orders: ['213']
+        correct_orders: ['213']
       },
     ]
   },

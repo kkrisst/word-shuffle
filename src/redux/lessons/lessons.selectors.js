@@ -18,7 +18,7 @@ export const selectQuestion = (lessonId, questionId) =>
         return {
             question: questionData.question,
             words,
-            correc_orders: questionData.correc_orders
+            correct_orders: questionData.correct_orders
         };
     }
 );
