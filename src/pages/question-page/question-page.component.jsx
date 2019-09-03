@@ -41,8 +41,6 @@ class QuestionPage extends React.Component {
     
     newUserOrder[targetId] = { word: item.word, id: item.id };
 
-    console.log(newUserOrder);
-
     this.setState({
       userOrder: newUserOrder,
       displayCheckString: false
