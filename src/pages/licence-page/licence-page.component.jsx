@@ -6,16 +6,15 @@ import StripeCheckoutButton from '../../components/stripe-button/stripe-button.c
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './licence-page.styles.scss';
 
-const LicencePage = () => {
-
+const LicencePage = ({ match, history }) => {
   const price = 19;
 
   const upgradeLicence = token => {
     const user = auth.currentUser;
-    console.log(user);
 
     if (user) {
       upgradeUserLicence(user);
+      history.push('/lessons');
     } else {
       console.error('No user is loggin in currently.');
     }
