@@ -43,7 +43,8 @@ class QuestionPage extends React.Component {
 
     this.setState({
       userOrder: newUserOrder,
-      displayCheckString: false
+      displayCheckString: false,
+      correct: false
     }/*, () => console.log(this.state)*/)
   };
 
