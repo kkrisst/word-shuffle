@@ -9,6 +9,7 @@ Try the live version here: http://word-shuffle-app.herokuapp.com
 
 ### Future plans
 
+- unit testing
 - mobile design
 - more lessons
 - better UX on the question page
