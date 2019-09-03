@@ -26,6 +26,7 @@ const HomePage = ({ currentUser }) => {
           className='landing-image'
         />
         <div className='title'>WORD SHUFFLE</div>
+        <div className='sub-title'>The Hungarian word order practice application</div>
         <a className='learn-more' href='#info-box'>CLICK TO LEARN MORE</a>
       </div>
 
