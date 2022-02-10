@@ -11,7 +11,7 @@
     "email-js": "^2.0.2",
     "emailjs-com": "^2.3.2",
     "firebase": "^6.5.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-dnd": "^9.3.4",
     "react-dnd-html5-backend": "^9.3.4",
